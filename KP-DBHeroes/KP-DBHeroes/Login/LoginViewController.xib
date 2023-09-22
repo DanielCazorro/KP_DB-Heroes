@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="KP_DBHeroes" customModuleProvider="target">
             <connections>
                 <outlet property="entrarButton" destination="Hos-a8-uzy" id="Ino-fV-dCI"/>
+                <outlet property="passwordTextField" destination="jkq-Kh-dzM" id="lyp-ZF-Ibf"/>
+                <outlet property="usernameTextField" destination="GeK-d2-8XG" id="Gqd-D0-FKD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

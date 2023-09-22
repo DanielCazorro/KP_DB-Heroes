@@ -19,6 +19,11 @@
 		5D0E87042ABD800B00AFA2DA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */; };
 		5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */; };
 		5D779C142ABDFD2300F74B56 /* HeroListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */; };
+		5D779C162ABE018B00F74B56 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C152ABE018B00F74B56 /* NetworkModel.swift */; };
+		5D779C182ABE01B100F74B56 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C172ABE01B100F74B56 /* LocalDataModel.swift */; };
+		5D779C1A2ABE01DC00F74B56 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C192ABE01DC00F74B56 /* Hero.swift */; };
+		5D779C1D2ABE01F900F74B56 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C1C2ABE01F900F74B56 /* Transformation.swift */; };
+		5D779C1F2ABE021700F74B56 /* GetTransformationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C1E2ABE021700F74B56 /* GetTransformationBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListViewController.xib; sourceTree = "<group>"; };
+		5D779C152ABE018B00F74B56 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		5D779C172ABE01B100F74B56 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
+		5D779C192ABE01DC00F74B56 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		5D779C1C2ABE01F900F74B56 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
+		5D779C1E2ABE021700F74B56 /* GetTransformationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 		5D0E86D02ABD7D2B00AFA2DA /* KP-DBHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				5D779C202ABE023A00F74B56 /* Models */,
 				5D779C102ABDFCFF00F74B56 /* Hero List */,
 				5D0E87052ABD83A300AFA2DA /* Login */,
 				5D0E86D12ABD7D2B00AFA2DA /* AppDelegate.swift */,
@@ -150,6 +161,18 @@
 				5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */,
 			);
 			path = "Hero List";
+			sourceTree = "<group>";
+		};
+		5D779C202ABE023A00F74B56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D779C152ABE018B00F74B56 /* NetworkModel.swift */,
+				5D779C192ABE01DC00F74B56 /* Hero.swift */,
+				5D779C1C2ABE01F900F74B56 /* Transformation.swift */,
+				5D779C1E2ABE021700F74B56 /* GetTransformationBody.swift */,
+				5D779C172ABE01B100F74B56 /* LocalDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D779C162ABE018B00F74B56 /* NetworkModel.swift in Sources */,
 				5D0E87032ABD800B00AFA2DA /* LoginViewController.swift in Sources */,
+				5D779C182ABE01B100F74B56 /* LocalDataModel.swift in Sources */,
+				5D779C1A2ABE01DC00F74B56 /* Hero.swift in Sources */,
 				5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */,
 				5D0E86D62ABD7D2B00AFA2DA /* ViewController.swift in Sources */,
 				5D0E86D22ABD7D2B00AFA2DA /* AppDelegate.swift in Sources */,
 				5D0E86D42ABD7D2B00AFA2DA /* SceneDelegate.swift in Sources */,
+				5D779C1D2ABE01F900F74B56 /* Transformation.swift in Sources */,
+				5D779C1F2ABE021700F74B56 /* GetTransformationBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
