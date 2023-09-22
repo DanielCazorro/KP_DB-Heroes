@@ -17,6 +17,8 @@
 		5D0E86F52ABD7D2C00AFA2DA /* KP_DBHeroesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E86F42ABD7D2C00AFA2DA /* KP_DBHeroesUITestsLaunchTests.swift */; };
 		5D0E87032ABD800B00AFA2DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E87012ABD800B00AFA2DA /* LoginViewController.swift */; };
 		5D0E87042ABD800B00AFA2DA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */; };
+		5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */; };
+		5D779C142ABDFD2300F74B56 /* HeroListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5D0E86F42ABD7D2C00AFA2DA /* KP_DBHeroesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KP_DBHeroesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D0E87012ABD800B00AFA2DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
+		5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		5D0E86D02ABD7D2B00AFA2DA /* KP-DBHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				5D779C102ABDFCFF00F74B56 /* Hero List */,
 				5D0E87052ABD83A300AFA2DA /* Login */,
 				5D0E86D12ABD7D2B00AFA2DA /* AppDelegate.swift */,
 				5D0E86D32ABD7D2B00AFA2DA /* SceneDelegate.swift */,
@@ -136,6 +141,15 @@
 				5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5D779C102ABDFCFF00F74B56 /* Hero List */ = {
+			isa = PBXGroup;
+			children = (
+				5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */,
+				5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */,
+			);
+			path = "Hero List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D779C142ABDFD2300F74B56 /* HeroListViewController.xib in Resources */,
 				5D0E86DE2ABD7D2C00AFA2DA /* LaunchScreen.storyboard in Resources */,
 				5D0E86DB2ABD7D2C00AFA2DA /* Assets.xcassets in Resources */,
 				5D0E87042ABD800B00AFA2DA /* LoginViewController.xib in Resources */,
@@ -270,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D0E87032ABD800B00AFA2DA /* LoginViewController.swift in Sources */,
+				5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */,
 				5D0E86D62ABD7D2B00AFA2DA /* ViewController.swift in Sources */,
 				5D0E86D22ABD7D2B00AFA2DA /* AppDelegate.swift in Sources */,
 				5D0E86D42ABD7D2B00AFA2DA /* SceneDelegate.swift in Sources */,
