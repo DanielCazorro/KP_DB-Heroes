@@ -79,6 +79,7 @@
                                     </buttonConfiguration>
                                     <connections>
                                         <action selector="tapEntrarButton:" destination="-1" eventType="touchUpInside" id="ble-xG-nAw"/>
+                                        <action selector="touchEntrarButton:" destination="-1" eventType="touchUpInside" id="x0l-pR-VFn"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyP-R4-itU">

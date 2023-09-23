@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Hero: Decodable {
     let id: String
     let name: String

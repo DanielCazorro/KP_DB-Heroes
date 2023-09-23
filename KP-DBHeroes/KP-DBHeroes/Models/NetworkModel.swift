@@ -45,8 +45,6 @@ final class NetworkModel {
         self.session = session
     }
     
-    // https://dragonball.keepcoding.education/api/auth/login
-    
     func login(
         user: String,
         password: String,
@@ -59,8 +57,7 @@ final class NetworkModel {
             completion(.failure(.malformedUrl))
             return
         }
-        
-        // user:password
+
         let loginString = String(format: "%@:%@", user, password)
         guard let loginData = loginString.data(using: .utf8) else {
             completion(.failure(.decodingFailed))
@@ -148,15 +145,6 @@ final class NetworkModel {
             completion(.failure(.noToken))
             return
         }
-        
-//        let body = GetTransformationBody(id: hero.id)
-//
-//        guard let encodedBody = try? JSONEncoder().encode(body) else {
-//            completion(.failure(.encodingFailed))
-//            return
-//        }
-//
-//        let bodyString = String(data: encodedBody, encoding: .utf8)
         
         var urlComponents = URLComponents()
         urlComponents.queryItems = [URLQueryItem(name: "id", value: hero.id)]
