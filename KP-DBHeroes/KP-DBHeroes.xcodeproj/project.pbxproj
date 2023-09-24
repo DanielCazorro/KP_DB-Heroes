@@ -115,9 +115,8 @@
 		5D0E86D02ABD7D2B00AFA2DA /* KP-DBHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				5D19B9BC2AC02EDB00CA0A85 /* Views */,
 				5D779C202ABE023A00F74B56 /* Models */,
-				5D779C102ABDFCFF00F74B56 /* Hero List */,
-				5D0E87052ABD83A300AFA2DA /* Login */,
 				5D0E86D12ABD7D2B00AFA2DA /* AppDelegate.swift */,
 				5D0E86D32ABD7D2B00AFA2DA /* SceneDelegate.swift */,
 				5D0E86D52ABD7D2B00AFA2DA /* ViewController.swift */,
@@ -152,6 +151,15 @@
 				5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5D19B9BC2AC02EDB00CA0A85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D779C102ABDFCFF00F74B56 /* Hero List */,
+				5D0E87052ABD83A300AFA2DA /* Login */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5D779C102ABDFCFF00F74B56 /* Hero List */ = {
