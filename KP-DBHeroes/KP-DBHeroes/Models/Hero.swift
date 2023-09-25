@@ -14,3 +14,5 @@ struct Hero: Decodable {
     let photo: URL
     let favorite: Bool
 }
+
+extension Hero: TransformHeroes {}

@@ -130,7 +130,7 @@ final class NetworkModel {
     }
     
     func getTransformations(
-        for hero: Hero,
+        for hero: TransformHeroes,
         completion: @escaping (Result<[Transformation], NetworkError>) -> Void
     ) {
         var components = baseComponents
@@ -171,7 +171,7 @@ final class NetworkModel {
             defer {
                 completion(result)
             }
-
+            
             guard error == nil else {
                 result = .failure(.unknown)
                 return

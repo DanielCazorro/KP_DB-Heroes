@@ -13,3 +13,5 @@ struct Transformation: Decodable {
     let description: String
     let photo: URL
 }
+
+extension Transformation: TransformHeroes {}

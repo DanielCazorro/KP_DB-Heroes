@@ -14,29 +14,41 @@ class LoginViewController: UIViewController {
 
     private let model = NetworkModel()
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     @IBAction func tapEntrarButton(_ sender: Any) {
-        
         model.login(
-                    user: usernameTextField.text ?? "",
-                    password: passwordTextField.text ?? ""
-                ) { [weak self] result in
-                    switch result {
-                        case let .success(token):
-                            print("Token: \(token)")
-        
-                        DispatchQueue.main.async {
-                                        let heroListVC = HeroListViewController(nibName: "HeroListViewController", bundle: nil)
-                                        self?.navigationController?.pushViewController(heroListVC, animated: true)
-                                    }
-
-                        case let .failure(error):
-                            print("Error: \(error)")
+            user: usernameTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        ) { [weak self] result in
+            switch result {
+                case let .success(token):
+                    print("Succes")
+                    self?.model.getHeroes {  result in
+                        switch  result {
+                            case let .success(heroes):
+                                DispatchQueue.main.async {
+                                    self?.goToHeroList(heroes: heroes)
+                                }
+                            case let .failure(error):
+                                print("error \(error)")
+                        }
                     }
-                }
-            }
-            
-            override func viewDidLoad() {
-                super.viewDidLoad()
-                
+                case let .failure(error):
+                    print("error \(error)")
             }
         }
+    }
+
+        }
+
+extension LoginViewController {
+    func goToHeroList(heroes: [Hero]) {
+        let heroList = HeroListViewController(model: heroes)
+        self.navigationController?.setViewControllers([heroList], animated: true)
+    }
+}
