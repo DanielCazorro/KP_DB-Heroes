@@ -17,7 +17,11 @@
 		5D0E87032ABD800B00AFA2DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E87012ABD800B00AFA2DA /* LoginViewController.swift */; };
 		5D0E87042ABD800B00AFA2DA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */; };
 		5D4ECE922AC1747A00F0318C /* TransformHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4ECE912AC1747A00F0318C /* TransformHeroes.swift */; };
-		5D4ECE952AC1863C00F0318C /* CellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4ECE942AC1863C00F0318C /* CellTableView.swift */; };
+		5D4ECE992AC2050400F0318C /* CellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4ECE972AC2050400F0318C /* CellTableView.swift */; };
+		5D4ECE9A2AC2050400F0318C /* CellTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4ECE982AC2050400F0318C /* CellTableView.xib */; };
+		5D4ECEA02AC2135C00F0318C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4ECE9E2AC2135C00F0318C /* DetailViewController.swift */; };
+		5D4ECEA12AC2135C00F0318C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4ECE9F2AC2135C00F0318C /* DetailViewController.xib */; };
+		5D4ECEA32AC21CAF00F0318C /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4ECEA22AC21CAF00F0318C /* ImageSet.swift */; };
 		5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */; };
 		5D779C142ABDFD2300F74B56 /* HeroListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */; };
 		5D779C162ABE018B00F74B56 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D779C152ABE018B00F74B56 /* NetworkModel.swift */; };
@@ -59,7 +63,11 @@
 		5D0E87012ABD800B00AFA2DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D0E87022ABD800B00AFA2DA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5D4ECE912AC1747A00F0318C /* TransformHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformHeroes.swift; sourceTree = "<group>"; };
-		5D4ECE942AC1863C00F0318C /* CellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableView.swift; sourceTree = "<group>"; };
+		5D4ECE972AC2050400F0318C /* CellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableView.swift; sourceTree = "<group>"; };
+		5D4ECE982AC2050400F0318C /* CellTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableView.xib; sourceTree = "<group>"; };
+		5D4ECE9E2AC2135C00F0318C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5D4ECE9F2AC2135C00F0318C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		5D4ECEA22AC21CAF00F0318C /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 		5D779C112ABDFD2300F74B56 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		5D779C122ABDFD2300F74B56 /* HeroListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListViewController.xib; sourceTree = "<group>"; };
 		5D779C152ABE018B00F74B56 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 				5D0E86DC2ABD7D2C00AFA2DA /* LaunchScreen.storyboard */,
 				5D0E86DA2ABD7D2C00AFA2DA /* Assets.xcassets */,
 				5D0E86DF2ABD7D2C00AFA2DA /* Info.plist */,
+				5D4ECEA22AC21CAF00F0318C /* ImageSet.swift */,
 			);
 			path = "KP-DBHeroes";
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 		5D19B9BC2AC02EDB00CA0A85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5D4ECE9D2AC2134B00F0318C /* Detail  */,
 				5D779C102ABDFCFF00F74B56 /* Hero List */,
 				5D0E87052ABD83A300AFA2DA /* Login */,
 			);
@@ -176,9 +186,19 @@
 		5D4ECE962AC1869B00F0318C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				5D4ECE942AC1863C00F0318C /* CellTableView.swift */,
+				5D4ECE972AC2050400F0318C /* CellTableView.swift */,
+				5D4ECE982AC2050400F0318C /* CellTableView.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5D4ECE9D2AC2134B00F0318C /* Detail  */ = {
+			isa = PBXGroup;
+			children = (
+				5D4ECE9E2AC2135C00F0318C /* DetailViewController.swift */,
+				5D4ECE9F2AC2135C00F0318C /* DetailViewController.xib */,
+			);
+			path = "Detail ";
 			sourceTree = "<group>";
 		};
 		5D779C102ABDFCFF00F74B56 /* Hero List */ = {
@@ -306,6 +326,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4ECE9A2AC2050400F0318C /* CellTableView.xib in Resources */,
+				5D4ECEA12AC2135C00F0318C /* DetailViewController.xib in Resources */,
 				5D779C142ABDFD2300F74B56 /* HeroListViewController.xib in Resources */,
 				5D0E86DE2ABD7D2C00AFA2DA /* LaunchScreen.storyboard in Resources */,
 				5D0E86DB2ABD7D2C00AFA2DA /* Assets.xcassets in Resources */,
@@ -334,15 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4ECEA32AC21CAF00F0318C /* ImageSet.swift in Sources */,
 				5D779C162ABE018B00F74B56 /* NetworkModel.swift in Sources */,
 				5D0E87032ABD800B00AFA2DA /* LoginViewController.swift in Sources */,
 				5D779C182ABE01B100F74B56 /* LocalDataModel.swift in Sources */,
+				5D4ECEA02AC2135C00F0318C /* DetailViewController.swift in Sources */,
 				5D779C1A2ABE01DC00F74B56 /* Hero.swift in Sources */,
 				5D779C132ABDFD2300F74B56 /* HeroListViewController.swift in Sources */,
 				5D4ECE922AC1747A00F0318C /* TransformHeroes.swift in Sources */,
 				5D0E86D22ABD7D2B00AFA2DA /* AppDelegate.swift in Sources */,
-				5D4ECE952AC1863C00F0318C /* CellTableView.swift in Sources */,
 				5D0E86D42ABD7D2B00AFA2DA /* SceneDelegate.swift in Sources */,
+				5D4ECE992AC2050400F0318C /* CellTableView.swift in Sources */,
 				5D779C1D2ABE01F900F74B56 /* Transformation.swift in Sources */,
 				5D779C1F2ABE021700F74B56 /* GetTransformationBody.swift in Sources */,
 			);

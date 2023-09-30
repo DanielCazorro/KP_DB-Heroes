@@ -14,10 +14,8 @@ class LoginViewController: UIViewController {
 
     private let model = NetworkModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func tapEntrarButton(_ sender: Any) {
@@ -26,7 +24,7 @@ class LoginViewController: UIViewController {
             password: passwordTextField.text ?? ""
         ) { [weak self] result in
             switch result {
-                case let .success(token):
+            case let .success(token):
                     print("Succes")
                     self?.model.getHeroes {  result in
                         switch  result {
@@ -43,8 +41,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
-        }
+}
 
 extension LoginViewController {
     func goToHeroList(heroes: [Hero]) {
