@@ -1,5 +1,5 @@
 //
-//  KP_DBHeroesUITestsLaunchTests.swift
+//  KP_DBHeroesUITests.swift
 //  KP-DBHeroesUITests
 //
 //  Created by Daniel Cazorro Frías on 22/9/23.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class KP_DBHeroesUITestsLaunchTests: XCTestCase {
+final class Dragon_Ball_HeroesUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class KP_DBHeroesUITests: XCTestCase {
+final class Dragon_Ball_HeroesUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

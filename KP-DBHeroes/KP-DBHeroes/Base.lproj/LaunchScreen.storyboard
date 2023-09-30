@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,30 +13,21 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3" userLabel="View Launch Screen">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KeepCoding Dragon Ball Heroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q92-I9-KZm">
-                                <rect key="frame" x="12" y="329" width="369" height="26.333333333333314"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DBTitle" translatesAutoresizingMaskIntoConstraints="NO" id="uci-OG-sY2">
-                                <rect key="frame" x="12" y="348.33333333333326" width="369" height="371"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DBTitle" translatesAutoresizingMaskIntoConstraints="NO" id="21C-Sb-jbY">
+                                <rect key="frame" x="12" y="358" width="369" height="136"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q92-I9-KZm" secondAttribute="trailing" constant="12" id="Cxb-0B-sQB"/>
-                            <constraint firstItem="Q92-I9-KZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="Gj6-xI-rgO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uci-OG-sY2" secondAttribute="bottom" constant="98.666666666666686" id="Jw5-4c-53V"/>
-                            <constraint firstItem="uci-OG-sY2" firstAttribute="trailing" secondItem="Q92-I9-KZm" secondAttribute="trailing" id="OmM-7O-hdq"/>
-                            <constraint firstItem="uci-OG-sY2" firstAttribute="top" secondItem="Q92-I9-KZm" secondAttribute="bottom" constant="-7" id="c5r-fG-ehr"/>
-                            <constraint firstItem="Q92-I9-KZm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-83.833333333333371" id="hGa-LF-Jqe"/>
-                            <constraint firstItem="uci-OG-sY2" firstAttribute="leading" secondItem="Q92-I9-KZm" secondAttribute="leading" id="zPS-xN-5Ae"/>
+                            <constraint firstItem="21C-Sb-jbY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="12" id="8DI-ks-ilv"/>
+                            <constraint firstItem="21C-Sb-jbY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gfm-xo-rmO"/>
+                            <constraint firstAttribute="trailing" secondItem="21C-Sb-jbY" secondAttribute="trailing" constant="12" id="O8z-kp-zUZ"/>
+                            <constraint firstItem="21C-Sb-jbY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f7V-2Q-FOZ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,9 +40,6 @@
         <image name="DBTitle" width="787" height="136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -1,23 +1,27 @@
 //
 //  NetworkModel.swift
-//  KP-DBHeroes
+//  Dragon Ball Heroes
 //
-//  Created by Daniel Cazorro Frías on 22/9/23.
+//  Created by Juan Carlos Torrejón Cañedo on 25/9/23.
 //
 
 import Foundation
 
 final class NetworkModel {
+    
+    // MARK: Errores
     enum NetworkError: Error {
         case unknown
         case malformedUrl
+        case loginString
+        case encodingfailed
         case decodingFailed
-        case encodingFailed
         case noData
         case statusCode(code: Int?)
         case noToken
     }
-
+    
+    // MARK: Componentes y Token
     private var baseComponents: URLComponents {
         var components = URLComponents()
         components.scheme = "https"
@@ -39,16 +43,19 @@ final class NetworkModel {
         }
     }
     
+    // MARK: URL Session
     private let session: URLSession
     
     init(session: URLSession = .shared) {
         self.session = session
     }
     
+    // MARK: Login para obtener token y obtener respuestas de la API
     func login(
         user: String,
         password: String,
-        completion: @escaping (Result<String, NetworkError>) -> Void
+        completion: @escaping (Result<String,
+                               NetworkError>) -> Void
     ) {
         var components = baseComponents
         components.path = "/api/auth/login"
@@ -57,17 +64,20 @@ final class NetworkModel {
             completion(.failure(.malformedUrl))
             return
         }
-
+        
+        /// user:password (lo estamos codificando)
         let loginString = String(format: "%@:%@", user, password)
         guard let loginData = loginString.data(using: .utf8) else {
             completion(.failure(.decodingFailed))
             return
         }
+        
         let base64LoginString = loginData.base64EncodedString()
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        request.setValue("Basic \(base64LoginString)",
+                         forHTTPHeaderField: "Authorization")
         let task = session.dataTask(with: request) { [weak self] data, response, error in
             guard error == nil else {
                 completion(.failure(.unknown))
@@ -95,12 +105,13 @@ final class NetworkModel {
             completion(.success(token))
             self?.token = token
         }
-        
         task.resume()
     }
     
+    // MARK: Funcion para obtener todos los heroes
     func getHeroes(
-        completion: @escaping (Result<[Hero], NetworkError>) -> Void
+        completion: @escaping (Result<[DragonBallHero],
+                               NetworkError>) -> Void
     ) {
         var components = baseComponents
         components.path = "/api/heros/all"
@@ -110,28 +121,32 @@ final class NetworkModel {
             return
         }
         
-        guard let token else {
-            completion(.failure(.noToken))
-            return
-        }
+         guard let token else {
+             completion(.failure( .noToken))
+         return
+         }
         
         var urlComponents = URLComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "name", value: "")]
+        urlComponents.queryItems = [URLQueryItem(name: "name",
+                                                 value: "")]
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = urlComponents.query?.data(using: .utf8)
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(token)",
+                         forHTTPHeaderField: "Authorization")
         createTask(
             for: request,
-            using: [Hero].self,
+            using: [DragonBallHero].self,
             completion: completion
         )
     }
-    
-    func getTransformations(
-        for hero: TransformHeroes,
-        completion: @escaping (Result<[Transformation], NetworkError>) -> Void
+     
+    // MARK: Obtener las transformaciones de un heroe
+    func getTransformations(for DragonBallHero: Character,
+                            completion: @escaping (
+                                Result<[Transformation],
+                                NetworkError>) -> Void
     ) {
         var components = baseComponents
         components.path = "/api/heros/tranformations"
@@ -140,18 +155,18 @@ final class NetworkModel {
             completion(.failure(.malformedUrl))
             return
         }
-        
         guard let token else {
             completion(.failure(.noToken))
             return
         }
-        
+       
         var urlComponents = URLComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "id", value: hero.id)]
-        
+        urlComponents.queryItems = [URLQueryItem(name: "id",
+                                                 value: DragonBallHero.id)]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(token)",
+                         forHTTPHeaderField: "Authorization")
         request.httpBody = urlComponents.query?.data(using: .utf8)
         createTask(
             for: request,
@@ -160,18 +175,18 @@ final class NetworkModel {
         )
     }
     
+    // MARK: Función para task
     func createTask<T: Decodable>(
         for request: URLRequest,
         using type: T.Type,
         completion: @escaping (Result<T, NetworkError>) -> Void
-    ) {
+    ){
         let task = session.dataTask(with: request) { data, response, error in
             let result: Result<T, NetworkError>
             
             defer {
                 completion(result)
             }
-            
             guard error == nil else {
                 result = .failure(.unknown)
                 return
@@ -182,14 +197,13 @@ final class NetworkModel {
                 return
             }
             
-            guard let resource = try? JSONDecoder().decode(type, from: data) else {
+            guard let resource = try? JSONDecoder().decode(type,
+                                                           from: data) else {
                 result = .failure(.decodingFailed)
                 return
             }
-            
             result = .success(resource)
         }
-        
         task.resume()
     }
 }
