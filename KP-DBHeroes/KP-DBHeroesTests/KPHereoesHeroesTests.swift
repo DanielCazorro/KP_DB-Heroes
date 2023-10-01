@@ -18,11 +18,6 @@ final class KPHereoesTests: XCTestCase {
         let hero = Hero.init(id: "Daniel", url: nil, title: "KP", description: "Master")
         XCTAssertEqual(hero.id, "Daniel")
     }
-
-    func testPerformanceExample() throws {
-
-        self.measure { }
-    }
     
     func testDragonBallHeroInitialization() {
         

@@ -2,7 +2,7 @@
 //  CharacterProtocl.swift
 //  KP-DBHeroes
 //
-//  Created by Daniel Cazorro Frías on 22/9/23.
+//  Created by Daniel Cazorro Frías on 28/9/23.
 //
 
 import Foundation
