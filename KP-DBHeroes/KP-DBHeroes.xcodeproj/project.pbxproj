@@ -18,9 +18,9 @@
 		076DE26A2ABB4ABB00EBB136 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2692ABB4ABB00EBB136 /* LoginViewController.swift */; };
 		076DE26F2ABB4ABC00EBB136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076DE26E2ABB4ABC00EBB136 /* Assets.xcassets */; };
 		076DE2722ABB4ABC00EBB136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */; };
-		076DE27D2ABB4ABC00EBB136 /* Dragon_Ball_HeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE27C2ABB4ABC00EBB136 /* Dragon_Ball_HeroesTests.swift */; };
-		076DE2872ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2862ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift */; };
-		076DE2892ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2882ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift */; };
+		076DE27D2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */; };
+		076DE2872ABB4ABC00EBB136 /* KPDBHeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */; };
+		076DE2892ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */; };
 		076DE2962ABB4BDA00EBB136 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */; };
 		076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE29B2ABD019600EBB136 /* HeroesViewController.swift */; };
 		076DE29E2ABD019600EBB136 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE29C2ABD019600EBB136 /* HeroesViewController.xib */; };
@@ -67,10 +67,10 @@
 		076DE2712ABB4ABC00EBB136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		076DE2732ABB4ABC00EBB136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076DE2782ABB4ABC00EBB136 /* KP-DBHeroesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KP-DBHeroesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		076DE27C2ABB4ABC00EBB136 /* Dragon_Ball_HeroesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_Ball_HeroesTests.swift; sourceTree = "<group>"; };
+		076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPHereoesHeroesTests.swift; sourceTree = "<group>"; };
 		076DE2822ABB4ABC00EBB136 /* KP-DBHeroesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KP-DBHeroesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		076DE2862ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_Ball_HeroesUITests.swift; sourceTree = "<group>"; };
-		076DE2882ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_Ball_HeroesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPDBHeroesUITests.swift; sourceTree = "<group>"; };
+		076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPDBHeroesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		076DE29B2ABD019600EBB136 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		076DE29C2ABD019600EBB136 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		076DE27B2ABB4ABC00EBB136 /* KP-DBHeroesTests */ = {
 			isa = PBXGroup;
 			children = (
-				076DE27C2ABB4ABC00EBB136 /* Dragon_Ball_HeroesTests.swift */,
+				076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */,
 			);
 			path = "KP-DBHeroesTests";
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 		076DE2852ABB4ABC00EBB136 /* KP-DBHeroesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				076DE2862ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift */,
-				076DE2882ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift */,
+				076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */,
+				076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */,
 			);
 			path = "KP-DBHeroesUITests";
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076DE27D2ABB4ABC00EBB136 /* Dragon_Ball_HeroesTests.swift in Sources */,
+				076DE27D2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076DE2892ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift in Sources */,
-				076DE2872ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift in Sources */,
+				076DE2892ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift in Sources */,
+				076DE2872ABB4ABC00EBB136 /* KPDBHeroesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,14 +546,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KP-DBHeroes/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dragon Ball Heroes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,14 +577,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KP-DBHeroes/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dragon Ball Heroes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,9 +608,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,9 +628,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,8 +647,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -659,8 +666,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P48L4VGBZ7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

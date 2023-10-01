@@ -29,7 +29,7 @@ final class NetworkModel {
     }
 
     func fetchHeroes(requestData: DragonBallHeroRequest,
-                     completion: @escaping (Result<[DragonBallHeroResponse], NetworkError>) -> Void) {
+                     completion: @escaping (Result<[DBHeroResponse], NetworkError>) -> Void) {
         let path = "/api/heros/all"
         guard let url = URL(string: apiURL + path) else { return completion(.failure(.invalidURL)) }
         guard let token = NetworkModel.token else { return completion(.failure(.invalidToken)) }
@@ -44,7 +44,7 @@ final class NetworkModel {
         let task = urlSession.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
                 guard let data = data,
-                      let dragonBallResponse = try? JSONDecoder().decode([DragonBallHeroResponse].self, from: data) else {
+                      let dragonBallResponse = try? JSONDecoder().decode([DBHeroResponse].self, from: data) else {
                     return completion(.failure(.invalidResponse))
                 }
 

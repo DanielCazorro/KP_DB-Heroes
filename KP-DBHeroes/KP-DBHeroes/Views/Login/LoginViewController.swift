@@ -10,7 +10,9 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var passwordTextfield: UITextField!
+    
     @IBOutlet weak var loginButton: UIButton!
 
     let client = NetworkModel()

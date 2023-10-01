@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DragonBallHeroResponse: Decodable {
+struct DBHeroResponse: Decodable {
     let id: String
     let name: String
     let description: String
