@@ -9,13 +9,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    private let hCharacter: CharacterProtocol
+    private let hImage: UIImage?
+    private var hTransformations: [Transformations] = []
+    
+// MARK: - OUTLET -
+    
     @IBOutlet private weak var hImageView: UIImageView!
     @IBOutlet private weak var hNameLabel: UILabel!
     @IBOutlet private weak var hDescriptionLabel: UILabel!
     @IBOutlet private weak var button: UIButton!
-    private let hCharacter: CharacterProtocol
-    private let hImage: UIImage?
-    private var hTransformations: [Transformations] = []
     
     init(character: CharacterProtocol, image: UIImage?) {
         self.hCharacter = character
@@ -57,16 +60,17 @@ class DetailViewController: UIViewController {
 }
 
 private extension DetailViewController {
-    func configureButton() {
-        button.isHidden = true
-        button.backgroundColor = .systemBlue
-        button.setTitle("Transformaciones", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-    }
     
     func updateUI() {
         self.hImageView.image = hImage
         self.hNameLabel.text = hCharacter.title
         self.hDescriptionLabel.text = hCharacter.description
+    }
+    
+    func configureButton() {
+        button.isHidden = true
+        button.backgroundColor = .systemBlue
+        button.setTitle("Transformaciones", for: .normal)
+        button.setTitleColor(.white, for: .normal)
     }
 }
