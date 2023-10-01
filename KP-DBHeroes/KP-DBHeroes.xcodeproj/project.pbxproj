@@ -19,8 +19,6 @@
 		076DE26F2ABB4ABC00EBB136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076DE26E2ABB4ABC00EBB136 /* Assets.xcassets */; };
 		076DE2722ABB4ABC00EBB136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */; };
 		076DE27D2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */; };
-		076DE2872ABB4ABC00EBB136 /* KPDBHeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */; };
-		076DE2892ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */; };
 		076DE2962ABB4BDA00EBB136 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */; };
 		076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE29B2ABD019600EBB136 /* HeroesViewController.swift */; };
 		076DE29E2ABD019600EBB136 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE29C2ABD019600EBB136 /* HeroesViewController.xib */; };
@@ -37,13 +35,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		076DE2792ABB4ABC00EBB136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 076DE25A2ABB4ABB00EBB136 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 076DE2612ABB4ABB00EBB136;
-			remoteInfo = "Dragon Ball Heroes";
-		};
-		076DE2832ABB4ABC00EBB136 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 076DE25A2ABB4ABB00EBB136 /* Project object */;
 			proxyType = 1;
@@ -68,9 +59,6 @@
 		076DE2732ABB4ABC00EBB136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076DE2782ABB4ABC00EBB136 /* KP-DBHeroesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KP-DBHeroesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPHereoesHeroesTests.swift; sourceTree = "<group>"; };
-		076DE2822ABB4ABC00EBB136 /* KP-DBHeroesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KP-DBHeroesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPDBHeroesUITests.swift; sourceTree = "<group>"; };
-		076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPDBHeroesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		076DE29B2ABD019600EBB136 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		076DE29C2ABD019600EBB136 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
@@ -100,13 +88,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		076DE27F2ABB4ABC00EBB136 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,7 +105,6 @@
 			children = (
 				076DE2642ABB4ABB00EBB136 /* KP-DBHeroes */,
 				076DE27B2ABB4ABC00EBB136 /* KP-DBHeroesTests */,
-				076DE2852ABB4ABC00EBB136 /* KP-DBHeroesUITests */,
 				076DE2632ABB4ABB00EBB136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,7 +114,6 @@
 			children = (
 				076DE2622ABB4ABB00EBB136 /* KP-DBHeroes.app */,
 				076DE2782ABB4ABC00EBB136 /* KP-DBHeroesTests.xctest */,
-				076DE2822ABB4ABC00EBB136 /* KP-DBHeroesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,15 +138,6 @@
 				076DE27C2ABB4ABC00EBB136 /* KPHereoesHeroesTests.swift */,
 			);
 			path = "KP-DBHeroesTests";
-			sourceTree = "<group>";
-		};
-		076DE2852ABB4ABC00EBB136 /* KP-DBHeroesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				076DE2862ABB4ABC00EBB136 /* KPDBHeroesUITests.swift */,
-				076DE2882ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift */,
-			);
-			path = "KP-DBHeroesUITests";
 			sourceTree = "<group>";
 		};
 		076DE2972ABD006C00EBB136 /* Views */ = {
@@ -265,24 +235,6 @@
 			productReference = 076DE2782ABB4ABC00EBB136 /* KP-DBHeroesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		076DE2812ABB4ABC00EBB136 /* KP-DBHeroesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 076DE2922ABB4ABC00EBB136 /* Build configuration list for PBXNativeTarget "KP-DBHeroesUITests" */;
-			buildPhases = (
-				076DE27E2ABB4ABC00EBB136 /* Sources */,
-				076DE27F2ABB4ABC00EBB136 /* Frameworks */,
-				076DE2802ABB4ABC00EBB136 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				076DE2842ABB4ABC00EBB136 /* PBXTargetDependency */,
-			);
-			name = "KP-DBHeroesUITests";
-			productName = "Dragon Ball HeroesUITests";
-			productReference = 076DE2822ABB4ABC00EBB136 /* KP-DBHeroesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,10 +249,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					076DE2772ABB4ABC00EBB136 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 076DE2612ABB4ABB00EBB136;
-					};
-					076DE2812ABB4ABC00EBB136 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 076DE2612ABB4ABB00EBB136;
 					};
@@ -321,7 +269,6 @@
 			targets = (
 				076DE2612ABB4ABB00EBB136 /* KP-DBHeroes */,
 				076DE2772ABB4ABC00EBB136 /* KP-DBHeroesTests */,
-				076DE2812ABB4ABC00EBB136 /* KP-DBHeroesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,13 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		076DE2762ABB4ABC00EBB136 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		076DE2802ABB4ABC00EBB136 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,15 +329,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		076DE27E2ABB4ABC00EBB136 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				076DE2892ABB4ABC00EBB136 /* KPDBHeroesUITestsLaunchTests.swift in Sources */,
-				076DE2872ABB4ABC00EBB136 /* KPDBHeroesUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -405,11 +336,6 @@
 			isa = PBXTargetDependency;
 			target = 076DE2612ABB4ABB00EBB136 /* KP-DBHeroes */;
 			targetProxy = 076DE2792ABB4ABC00EBB136 /* PBXContainerItemProxy */;
-		};
-		076DE2842ABB4ABC00EBB136 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 076DE2612ABB4ABB00EBB136 /* KP-DBHeroes */;
-			targetProxy = 076DE2832ABB4ABC00EBB136 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -641,44 +567,6 @@
 			};
 			name = Release;
 		};
-		076DE2932ABB4ABC00EBB136 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Dragon Ball Heroes";
-			};
-			name = Debug;
-		};
-		076DE2942ABB4ABC00EBB136 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DanielCazorro.KP-DBHeroesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Dragon Ball Heroes";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -705,15 +593,6 @@
 			buildConfigurations = (
 				076DE2902ABB4ABC00EBB136 /* Debug */,
 				076DE2912ABB4ABC00EBB136 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		076DE2922ABB4ABC00EBB136 /* Build configuration list for PBXNativeTarget "KP-DBHeroesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				076DE2932ABB4ABC00EBB136 /* Debug */,
-				076DE2942ABB4ABC00EBB136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
