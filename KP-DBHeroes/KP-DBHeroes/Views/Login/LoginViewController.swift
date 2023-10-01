@@ -21,11 +21,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLogin(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
+        
+        
         client.login(requestData: LoginRequest(username: email, password: password)) { result in
-            guard case .success = result else { return }
-            let heroes = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
-            let navigationController = UINavigationController(rootViewController: heroes)
-            self.view.window?.rootViewController = navigationController
+            switch result {
+            case .success(let token):
+                
+                let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
+                let navController = UINavigationController(rootViewController: hero)
+                
+                self.view.window?.rootViewController = navController
+                
+            case .failure(let error):
+             
+                let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
+                popAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(popAlert, animated: true, completion: nil)
+            }
         }
     }
 }
