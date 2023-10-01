@@ -18,10 +18,8 @@ class HeroesViewController: UIViewController {
         title = "Heroes"
         tableView.register(UINib(nibName: "HeroesCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
     }
-
 }
 
-// MARK: - UITableViewDataSource
 extension HeroesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +40,6 @@ extension HeroesViewController: UITableViewDataSource {
 
 }
 
-// MARK: - UITableViewDelegate
 extension HeroesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

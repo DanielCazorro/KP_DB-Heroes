@@ -25,8 +25,5 @@ class LoginViewController: UIViewController {
             let navigationController = UINavigationController(rootViewController: heroes)
             self.view.window?.rootViewController = navigationController
         }
-
     }
-
 }
-

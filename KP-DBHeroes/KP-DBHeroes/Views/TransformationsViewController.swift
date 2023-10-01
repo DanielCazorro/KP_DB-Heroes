@@ -15,7 +15,6 @@ class TransformationsViewController: HeroesViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Init(coder:\(coder) has not been implemented")
     }
 }
-

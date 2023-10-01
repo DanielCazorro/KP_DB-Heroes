@@ -28,7 +28,7 @@ final class NetworkModel {
         self.apiURL = apiURL
     }
 
-    func fetchHeroes(requestData: DragonBallHeroRequest,
+    func fetchHeroes(requestData: DBHeroRequest,
                      completion: @escaping (Result<[DBHeroResponse], NetworkError>) -> Void) {
         let path = "/api/heros/all"
         guard let url = URL(string: apiURL + path) else { return completion(.failure(.invalidURL)) }

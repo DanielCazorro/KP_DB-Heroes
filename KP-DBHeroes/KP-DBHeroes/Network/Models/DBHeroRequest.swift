@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct DragonBallHeroRequest: Encodable {
+struct DBHeroRequest: Encodable {
     let name: String
 }

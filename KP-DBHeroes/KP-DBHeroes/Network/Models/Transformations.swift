@@ -20,6 +20,5 @@ struct Transformations: CharacterProtocol {
     }
 
     static func fetchCharacter(completion: ([Transformations]) -> Void) {
-        // Not needed
     }
 }

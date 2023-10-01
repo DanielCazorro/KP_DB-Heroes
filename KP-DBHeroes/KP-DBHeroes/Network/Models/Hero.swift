@@ -16,7 +16,7 @@ struct Hero: CharacterProtocol {
     static func fetchCharacter(completion: @escaping ([Hero]) -> Void) {
         let client = NetworkModel()
 
-        client.fetchHeroes(requestData: DragonBallHeroRequest(name: "")) { result in
+        client.fetchHeroes(requestData: DBHeroRequest(name: "")) { result in
             switch result {
             case .success(let response):
                 let heroes = response.map { hero in

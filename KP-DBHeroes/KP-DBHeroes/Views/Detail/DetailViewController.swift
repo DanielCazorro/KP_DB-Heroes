@@ -9,39 +9,39 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet private weak var heroImageView: UIImageView!
-    @IBOutlet private weak var heroNameLabel: UILabel!
-    @IBOutlet private weak var heroDescLabel: UILabel!
+    @IBOutlet private weak var hImageView: UIImageView!
+    @IBOutlet private weak var hNameLabel: UILabel!
+    @IBOutlet private weak var hDescriptionLabel: UILabel!
     @IBOutlet private weak var button: UIButton!
-    private let character: CharacterProtocol
-    private let image: UIImage?
-    private var transformations: [Transformations] = []
+    private let hCharacter: CharacterProtocol
+    private let hImage: UIImage?
+    private var hTransformations: [Transformations] = []
     
     init(character: CharacterProtocol, image: UIImage?) {
-        self.character = character
-        self.image = image
+        self.hCharacter = character
+        self.hImage = image
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:\(coder)) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = character.title
-        heroDescLabel.numberOfLines = .zero
+        title = hCharacter.title
+        hDescriptionLabel.numberOfLines = .zero
         configureButton()
         updateUI()
         let client = NetworkModel()
-        client.fetchTransformations(requestData: TransformationRequest(id: character.id)) { result in
+        client.fetchTransformations(requestData: TransformationRequest(id: hCharacter.id)) { result in
             switch result {
             case .success(let transformations):
                 self.button.isHidden = false
-                self.transformations = transformations.map { transformation in
+                self.hTransformations = transformations.map { transformation in
                     Transformations(url: URL(string: transformation.photo), title: transformation.name, description: transformation.description)
                 }
-                self.button.isHidden = self.transformations.count == .zero
+                self.button.isHidden = self.hTransformations.count == .zero
             case .failure(let error):
                 print("Error fetching transformations: \(error)")
             }
@@ -50,25 +50,23 @@ class DetailViewController: UIViewController {
     
     @IBAction func didSelectButton(_ sender: UIButton) {
        
-        let transformationsVC = TransformationsViewController(transformations: self.transformations)
+        let transformationsVC = TransformationsViewController(transformations: self.hTransformations)
             self.navigationController?.pushViewController(transformationsVC, animated: true)
         
     }
 }
 
-
-// MARK: - Private methods
 private extension DetailViewController {
-    func updateUI() {
-        self.heroImageView.image = image
-        self.heroNameLabel.text = character.title
-        self.heroDescLabel.text = character.description
-    }
-
     func configureButton() {
         button.isHidden = true
         button.backgroundColor = .systemBlue
         button.setTitle("Transformaciones", for: .normal)
         button.setTitleColor(.white, for: .normal)
+    }
+    
+    func updateUI() {
+        self.hImageView.image = hImage
+        self.hNameLabel.text = hCharacter.title
+        self.hDescriptionLabel.text = hCharacter.description
     }
 }
