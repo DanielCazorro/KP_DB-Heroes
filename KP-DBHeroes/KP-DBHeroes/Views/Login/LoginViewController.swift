@@ -8,14 +8,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let client = NetworkModel()
 
+// MARK: - OUTLET -
+    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextfield: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
 
-    let client = NetworkModel()
+// MARK: - ACTION -
     
     @IBAction func didTapLogin(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextfield.text else { return }

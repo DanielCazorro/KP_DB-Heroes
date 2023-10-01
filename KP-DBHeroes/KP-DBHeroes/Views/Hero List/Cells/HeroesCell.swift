@@ -8,9 +8,17 @@
 import UIKit
 
 class HeroesCell: UITableViewCell {
+    
+// MARK: - OUTLET -
+    
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroDescLabel: UILabel!
     @IBOutlet weak var heroImageView: UIImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        heroImageView.image = nil
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,11 +26,6 @@ class HeroesCell: UITableViewCell {
         heroNameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         heroDescLabel.numberOfLines = .zero
         heroDescLabel.font = .systemFont(ofSize: 14, weight: .regular)
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        heroImageView.image = nil
     }
 
     func configure(character: CharacterProtocol) {
