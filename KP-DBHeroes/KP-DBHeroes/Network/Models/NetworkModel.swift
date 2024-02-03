@@ -9,7 +9,6 @@ import Foundation
 
 final class NetworkModel {
 
-    // Enum para manejar los posibles errores de red
     enum NetworkError: Error {
         case invalidURL
         case invalidResponse
@@ -20,18 +19,18 @@ final class NetworkModel {
         case unknown
     }
 
-    // Enum para representar los métodos HTTP admitidos
     enum HTTPMethod: String {
         case post = "POST"
     }
 
-    // URL base de la API
-    private let apiURL: String = "https://dragonball.keepcoding.education"
+    private let apiURL: String
 
-    // Token de autenticación para realizar solicitudes autenticadas
     private static var token: String?
 
-    // Función para obtener la lista de héroes
+    init(apiURL: String = "https://dragonball.keepcoding.education") {
+        self.apiURL = apiURL
+    }
+
     func fetchHeroes(requestData: DBHeroRequest,
                      completion: @escaping (Result<[DBHeroResponse], NetworkError>) -> Void) {
         let path = "/api/heros/all"
@@ -58,10 +57,9 @@ final class NetworkModel {
         task.resume()
     }
     
-    // Función para obtener la lista de transformaciones
     func fetchTransformations(requestData: TransformationRequest,
-                              completion: @escaping (Result<[TransformationResponse], NetworkError>) -> Void) {
-        let path = "/api/heros/tranformations" // Corrección de la ruta, estaba mal escrita
+                     completion: @escaping (Result<[TransformationResponse], NetworkError>) -> Void) {
+        let path = "/api/heros/tranformations"
         guard let url = URL(string: apiURL + path) else { return completion(.failure(.invalidURL)) }
         guard let token = NetworkModel.token else { return completion(.failure(.invalidToken)) }
         var request = URLRequest(url: url)
@@ -85,7 +83,6 @@ final class NetworkModel {
         task.resume()
     }
 
-    // Función para realizar el inicio de sesión
     func login(requestData: LoginRequest, completion: @escaping (Result<String, NetworkError>) -> Void) {
         let path = "/api/auth/login"
         guard let url = URL(string: apiURL + path) else {
