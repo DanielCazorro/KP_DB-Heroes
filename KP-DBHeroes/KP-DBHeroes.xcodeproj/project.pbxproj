@@ -123,12 +123,11 @@
 		076DE2642ABB4ABB00EBB136 /* KP-DBHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				079C1D242AC1913E0072A2DE /* Models */,
+				076DE2972ABD006C00EBB136 /* UI */,
+				076DE26E2ABB4ABC00EBB136 /* Assets.xcassets */,
 				076DE2652ABB4ABB00EBB136 /* AppDelegate.swift */,
 				076DE2672ABB4ABB00EBB136 /* SceneDelegate.swift */,
-				079C1D242AC1913E0072A2DE /* Models */,
-				076DE2972ABD006C00EBB136 /* Views */,
-				076DE26E2ABB4ABC00EBB136 /* Assets.xcassets */,
-				076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */,
 				076DE2732ABB4ABC00EBB136 /* Info.plist */,
 			);
 			path = "KP-DBHeroes";
@@ -143,16 +142,17 @@
 			path = "KP-DBHeroesTests";
 			sourceTree = "<group>";
 		};
-		076DE2972ABD006C00EBB136 /* Views */ = {
+		076DE2972ABD006C00EBB136 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5D7E1FE02B6EC54300EFD66A /* Launch */,
 				074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */,
 				074356382ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift */,
+				076DE2982ABD007D00EBB136 /* Login */,
 				0743562B2ABF337F00D2AE0F /* Detail */,
 				076DE29A2ABD00CE00EBB136 /* Hero List */,
-				076DE2982ABD007D00EBB136 /* Login */,
 			);
-			path = Views;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		076DE2982ABD007D00EBB136 /* Login */ = {
@@ -198,6 +198,14 @@
 			);
 			name = Models;
 			path = Network/Models;
+			sourceTree = "<group>";
+		};
+		5D7E1FE02B6EC54300EFD66A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
