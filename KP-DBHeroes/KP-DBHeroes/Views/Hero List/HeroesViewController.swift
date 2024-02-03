@@ -9,78 +9,49 @@ import UIKit
 
 class HeroesViewController: UIViewController {
 
-    // MARK: - View State
-    private var content: [Hero] = []
+// MARK: - OUTLET -
     
-    // MARK: - IBOutlet -
+    var characters: [CharacterProtocol] = []
+    
     @IBOutlet weak var tableView: UITableView!
 
-    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Configurar título de la vista
         title = "Heroes"
-        
-        // Mostrar la barra de navegación
-        navigationController?.navigationBar.isHidden = false
-        
-        // Registrar la celda personalizada
-        tableView?.register(UINib(nibName: HeroesCell.identifier, bundle: nil), forCellReuseIdentifier: HeroesCell.identifier)
-        /*
-        // Obtener los personajes y actualizar la tabla cuando estén disponibles
-        Hero.fetchCharacter { [weak self] character in
-            self?.content = character
-            self?.tableView.reloadData()
-        }
-         */
+        tableView.register(UINib(nibName: "HeroesCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
     }
 }
 
-// MARK: - Extensions
-/*
-// UITableViewDataSource
 extension HeroesViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // Número de secciones en la tabla (en este caso solo una)
-        return 1
+        1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Número de filas en la sección (número de personajes)
-        return content.count
+        characters.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Configurar y retornar la celda de la tabla
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HeroesCell.identifier, for: indexPath) as? HeroesCell else {
-            let cell = UITableViewCell()
-            cell.textLabel?.text = "No data"
-            return cell
-        }
-        // Configurar la celda con los datos del personaje correspondiente
-        cell.configure(character: content[indexPath.row])
+        let character = characters[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell") as? HeroesCell else { return UITableViewCell() }
+        cell.configure(character: character)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
+
 }
 
-// UITableViewDelegate
 extension HeroesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Acción cuando se selecciona una fila (personaje) en la tabla
-        let character = content[indexPath.row]
-        let detailViewController = DetailViewController()
+        let character = characters[indexPath.row]
+        var image: UIImage?
+        if let cell = tableView.cellForRow(at: indexPath) as? HeroesCell {
+            image = cell.heroImageView.image
+        }
 
-        navigationController?.pushViewController(detailViewController, animated: true)
-        // Actualizar el detalle de la vista con los datos del personaje seleccionado
-        detailViewController.update(model: character)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Altura de cada fila en la tabla (uso de dimensiones automáticas)
-        return UITableView.automaticDimension
+        let heroDetail = DetailViewController(character: character, image: image)
+        navigationController?.pushViewController(heroDetail, animated: true)
     }
 }
-*/

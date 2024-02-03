@@ -9,9 +9,9 @@ import UIKit
 
 class TransformationsViewController: HeroesViewController {
 
-    init(transformations: [Transformation]) {
+    init(transformations: [Transformations]) {
         super.init(nibName: "HeroesViewController", bundle: nil)
-        //self.characters = transformations
+        self.characters = transformations
     }
     
     required init?(coder: NSCoder) {

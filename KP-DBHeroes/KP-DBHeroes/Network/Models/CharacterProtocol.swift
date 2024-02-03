@@ -7,8 +7,11 @@
 
 import Foundation
 
-protocol TableViewCellRepresentable {
-    var photo: URL { get }
+protocol CharacterProtocol {
+    var id: String { get }
+    var url: URL? { get }
     var title: String { get }
     var description: String { get }
+
+    static func fetchCharacter(completion: @escaping ([Self]) -> Void)
 }

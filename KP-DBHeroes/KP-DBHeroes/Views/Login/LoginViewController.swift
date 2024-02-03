@@ -9,45 +9,35 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // MARK: - IBOUTLET -
+    let client = NetworkModel()
+
+// MARK: - OUTLET -
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var loginButton: UIButton!
 
-    
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
 // MARK: - ACTION -
     
     @IBAction func didTapLogin(_ sender: UIButton) {
-        // Obtenemos el email y la contraseña de los textfields, si están disponibles
-        let email = emailTextField.text ?? ""
-        let password = passwordTextfield.text ?? ""
+        guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
         
-        // Creamos una instancia del modelo de red para realizar la solicitud de inicio de sesión
-        let model = NetworkModel()
         
-        // Realizamos la solicitud de inicio de sesión al servidor
-        model.login(user: email, password: password) { [weak self] result in
+        client.login(requestData: LoginRequest(username: email, password: password)) { result in
             switch result {
-            case .success(_):
-                // Si el inicio de sesión es exitoso, creamos la vista de héroes
-                let hero = HeroesViewController(nibName: "HeroesViewController", bundle: nil)
+            case .success(let token):
+                
+                let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
                 let navController = UINavigationController(rootViewController: hero)
                 
-                // Cambiamos la vista raíz de la ventana para mostrar la vista de héroes
-                self?.view.window?.rootViewController = navController
+                self.view.window?.rootViewController = navController
                 
-            case .failure(_):
-                // Si el inicio de sesión falla, mostramos una alerta de error
+            case .failure(let error):
+             
                 let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
                 popAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
-                // Presentamos la alerta de error
-                self?.present(popAlert, animated: true, completion: nil)
+                self.present(popAlert, animated: true, completion: nil)
             }
         }
     }
