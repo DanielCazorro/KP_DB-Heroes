@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         let model = NetworkModel()
         
         // Realizamos la solicitud de inicio de sesión al servidor
-        model.login(requestData: LoginRequest(username: email, password: password)) { [weak self] result in
+        model.login(user: email, password: password) { [weak self] result in
             switch result {
             case .success(_):
                 // Si el inicio de sesión es exitoso, creamos la vista de héroes
