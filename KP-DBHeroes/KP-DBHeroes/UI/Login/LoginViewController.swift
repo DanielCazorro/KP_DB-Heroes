@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         // Llama al método login del cliente con las credenciales proporcionadas
         client.login(requestData: LoginRequest(username: email, password: password)) { [weak self] result in
             switch result {
-            case .success(let token):
+            case .success(_):
                 // Si la solicitud es exitosa, crea una instancia de DragonBallHeroesViewController y la muestra en un UINavigationController
                 let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
                 let navController = UINavigationController(rootViewController: hero)
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
                 // Establece la nueva instancia de UINavigationController como el controlador de vista raíz
                 self?.view.window?.rootViewController = navController
                 
-            case .failure(let error):
+            case .failure(_):
                 // Si la solicitud falla, muestra una alerta con el mensaje de error
                 let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
                 popAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

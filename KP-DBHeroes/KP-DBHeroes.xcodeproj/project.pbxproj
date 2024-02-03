@@ -187,11 +187,11 @@
 			isa = PBXGroup;
 			children = (
 				079C1D252AC191580072A2DE /* NetworkModel.swift */,
-				074356302ABFB5AF00D2AE0F /* CharacterProtocol.swift */,
-				079C1D272AC191820072A2DE /* DBHeroResponse.swift */,
 				079C1D292AC191940072A2DE /* DBHeroRequest.swift */,
-				076DE2A02ABD071300EBB136 /* Hero.swift */,
+				079C1D272AC191820072A2DE /* DBHeroResponse.swift */,
 				079C1D2B2AC191A60072A2DE /* LoginRequest.swift */,
+				074356302ABFB5AF00D2AE0F /* CharacterProtocol.swift */,
+				076DE2A02ABD071300EBB136 /* Hero.swift */,
 				074356352ABFB9D600D2AE0F /* Transformations.swift */,
 				079C1D2D2AC1A0DB0072A2DE /* TransformationResponse.swift */,
 				079C1D2F2AC1A1020072A2DE /* TransformationRequest.swift */,
@@ -254,7 +254,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					076DE2612ABB4ABB00EBB136 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -367,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -399,6 +400,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -427,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -459,6 +462,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
