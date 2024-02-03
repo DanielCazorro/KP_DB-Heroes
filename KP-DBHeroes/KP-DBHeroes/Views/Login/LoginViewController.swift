@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(_):
                 // Si el inicio de sesión es exitoso, creamos la vista de héroes
-                let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
+                let hero = HeroesViewController(nibName: "HeroesViewController", bundle: nil)
                 let navController = UINavigationController(rootViewController: hero)
                 
                 // Cambiamos la vista raíz de la ventana para mostrar la vista de héroes

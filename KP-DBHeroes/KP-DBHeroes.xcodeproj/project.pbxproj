@@ -12,7 +12,6 @@
 		074356312ABFB5AF00D2AE0F /* CharacterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074356302ABFB5AF00D2AE0F /* CharacterProtocol.swift */; };
 		074356342ABFB7C400D2AE0F /* TransformationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */; };
 		074356362ABFB9D600D2AE0F /* Transformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074356352ABFB9D600D2AE0F /* Transformations.swift */; };
-		074356392ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074356382ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift */; };
 		076DE2662ABB4ABB00EBB136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2652ABB4ABB00EBB136 /* AppDelegate.swift */; };
 		076DE2682ABB4ABB00EBB136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2672ABB4ABB00EBB136 /* SceneDelegate.swift */; };
 		076DE26A2ABB4ABB00EBB136 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2692ABB4ABB00EBB136 /* LoginViewController.swift */; };
@@ -50,7 +49,6 @@
 		074356302ABFB5AF00D2AE0F /* CharacterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProtocol.swift; sourceTree = "<group>"; };
 		074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsViewController.swift; sourceTree = "<group>"; };
 		074356352ABFB9D600D2AE0F /* Transformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformations.swift; sourceTree = "<group>"; };
-		074356382ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallHeroesViewController.swift; sourceTree = "<group>"; };
 		076DE2622ABB4ABB00EBB136 /* KP-DBHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KP-DBHeroes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		076DE2652ABB4ABB00EBB136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076DE2672ABB4ABB00EBB136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,11 +144,10 @@
 		076DE2972ABD006C00EBB136 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */,
-				074356382ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift */,
-				0743562B2ABF337F00D2AE0F /* Detail */,
-				076DE29A2ABD00CE00EBB136 /* Hero List */,
 				076DE2982ABD007D00EBB136 /* Login */,
+				076DE29A2ABD00CE00EBB136 /* Hero List */,
+				074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */,
+				0743562B2ABF337F00D2AE0F /* Detail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,12 +183,12 @@
 		079C1D242AC1913E0072A2DE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				079C1D2B2AC191A60072A2DE /* LoginRequest.swift */,
+				079C1D252AC191580072A2DE /* NetworkModel.swift */,
 				074356302ABFB5AF00D2AE0F /* CharacterProtocol.swift */,
 				079C1D272AC191820072A2DE /* DBHeroResponse.swift */,
 				079C1D292AC191940072A2DE /* DBHeroRequest.swift */,
 				076DE2A02ABD071300EBB136 /* Hero.swift */,
-				079C1D2B2AC191A60072A2DE /* LoginRequest.swift */,
-				079C1D252AC191580072A2DE /* NetworkModel.swift */,
 				074356352ABFB9D600D2AE0F /* Transformations.swift */,
 				079C1D2D2AC1A0DB0072A2DE /* TransformationResponse.swift */,
 				079C1D2F2AC1A1020072A2DE /* TransformationRequest.swift */,
@@ -317,7 +314,6 @@
 				076DE2662ABB4ABB00EBB136 /* AppDelegate.swift in Sources */,
 				074356342ABFB7C400D2AE0F /* TransformationsViewController.swift in Sources */,
 				076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */,
-				074356392ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift in Sources */,
 				079C1D2E2AC1A0DB0072A2DE /* TransformationResponse.swift in Sources */,
 				076DE2682ABB4ABB00EBB136 /* SceneDelegate.swift in Sources */,
 				079C1D282AC191820072A2DE /* DBHeroResponse.swift in Sources */,

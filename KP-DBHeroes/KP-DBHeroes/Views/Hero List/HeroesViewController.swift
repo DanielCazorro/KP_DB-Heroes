@@ -17,6 +17,10 @@ class HeroesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Hero.fetchCharacter { character in
+            self.characters = character
+            self.tableView.reloadData()
+        }
         title = "Heroes"
         tableView.register(UINib(nibName: "HeroesCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
     }
