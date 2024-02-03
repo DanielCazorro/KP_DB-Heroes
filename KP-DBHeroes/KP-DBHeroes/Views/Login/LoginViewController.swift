@@ -25,14 +25,14 @@ class LoginViewController: UIViewController {
         
         client.login(requestData: LoginRequest(username: email, password: password)) { result in
             switch result {
-            case .success(let token):
+            case .success(_):
                 
                 let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
                 let navController = UINavigationController(rootViewController: hero)
                 
                 self.view.window?.rootViewController = navController
                 
-            case .failure(let error):
+            case .failure(_):
              
                 let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
                 popAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
