@@ -37,14 +37,14 @@ class DetailViewController: UIViewController {
         configureButton()
         updateUI()
         let client = NetworkModel()
-        client.fetchTransformations(requestData: TransformationRequest(id: hCharacter.id)) { result in
+        client.fetchTransformations(requestData: TransformationRequest(id: hCharacter.id)) { [weak self] result in
             switch result {
             case .success(let transformations):
-                self.button.isHidden = false
-                self.hTransformations = transformations.map { transformation in
+                self?.button.isHidden = false
+                self?.hTransformations = transformations.map { transformation in
                     Transformations(url: URL(string: transformation.photo), title: transformation.name, description: transformation.description)
                 }
-                self.button.isHidden = self.hTransformations.count == .zero
+                self?.button.isHidden = self?.hTransformations.count == .zero
             case .failure(let error):
                 print("Error fetching transformations: \(error)")
             }

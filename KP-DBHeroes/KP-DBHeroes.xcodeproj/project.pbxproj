@@ -149,8 +149,8 @@
 				074356332ABFB7C400D2AE0F /* TransformationsViewController.swift */,
 				074356382ABFBAFC00D2AE0F /* DragonBallHeroesViewController.swift */,
 				076DE2982ABD007D00EBB136 /* Login */,
-				0743562B2ABF337F00D2AE0F /* Detail */,
 				076DE29A2ABD00CE00EBB136 /* Hero List */,
+				0743562B2ABF337F00D2AE0F /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
