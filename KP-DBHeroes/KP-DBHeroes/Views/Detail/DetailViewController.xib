@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGg-bz-OOI">
-                    <rect key="frame" x="20" y="768" width="353" height="50"/>
+                    <rect key="frame" x="20" y="736" width="353" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ugg-hH-rKN"/>
                     </constraints>
@@ -61,7 +61,7 @@
                 <constraint firstItem="ezK-SA-n1b" firstAttribute="top" secondItem="lJL-rB-UbS" secondAttribute="bottom" constant="8" symbolic="YES" id="WpH-g4-htp"/>
                 <constraint firstItem="EGg-bz-OOI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="X9a-Eq-E2V"/>
                 <constraint firstItem="shU-qT-ddx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XnD-BF-RfU"/>
-                <constraint firstItem="EGg-bz-OOI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="hai-gw-RO6"/>
+                <constraint firstItem="EGg-bz-OOI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-32" id="hai-gw-RO6"/>
                 <constraint firstItem="lJL-rB-UbS" firstAttribute="top" secondItem="shU-qT-ddx" secondAttribute="bottom" constant="8" symbolic="YES" id="kUW-Ay-NTy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EGg-bz-OOI" secondAttribute="trailing" constant="20" id="lSd-oQ-3hg"/>
                 <constraint firstItem="shU-qT-ddx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="msQ-pc-Zsr"/>

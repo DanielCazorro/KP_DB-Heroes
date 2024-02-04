@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
         
         // Configurar la cantidad máxima de líneas para la etiqueta de descripción
         hDescriptionLabel.numberOfLines = .zero
-        
+                
         // Configurar el botón, su diseño
         configureButton()
         
@@ -121,6 +121,7 @@ class DetailViewController: UIViewController {
         button.backgroundColor = .systemBlue
         button.setTitle("Transformaciones", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 16
     }
 }
 

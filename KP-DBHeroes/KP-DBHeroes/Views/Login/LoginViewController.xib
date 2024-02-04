@@ -35,11 +35,11 @@
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="A0O-h5-Uud" userLabel="Stack View Campos">
-                    <rect key="frame" x="12" y="472" width="369" height="226"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="A0O-h5-Uud" userLabel="Stack View Campos">
+                    <rect key="frame" x="12" y="466" width="369" height="232"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-id-HGT" userLabel="Stack View Email Password">
-                            <rect key="frame" x="0.0" y="0.0" width="369" height="132"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-id-HGT" userLabel="Stack View Email Password">
+                            <rect key="frame" x="0.0" y="0.0" width="369" height="136"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-un-zxr">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
@@ -50,7 +50,7 @@
                                     <textInputTraits key="textInputTraits" textContentType="email"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-bA-yTH">
-                                    <rect key="frame" x="0.0" y="68" width="369" height="64"/>
+                                    <rect key="frame" x="0.0" y="72" width="369" height="64"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="64" id="Rp4-t9-Vpo"/>
                                     </constraints>
@@ -60,7 +60,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-h9-7Ag" userLabel="Stack View Login Button">
-                            <rect key="frame" x="0.0" y="162" width="369" height="64"/>
+                            <rect key="frame" x="0.0" y="168" width="369" height="64"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-qm-o13" userLabel="View Spacing">
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="64"/>
