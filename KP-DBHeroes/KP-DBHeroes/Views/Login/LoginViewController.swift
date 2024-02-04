@@ -9,35 +9,38 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let client = NetworkModel()
-
-// MARK: - OUTLET -
-    
+    // MARK: - IBOUTLET -
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
-// MARK: - ACTION -
+    
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // MARK: - ACTION -
     
     @IBAction func didTapLogin(_ sender: UIButton) {
-        guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
+        // Obtenemos el email y la contraseña de los textfields, si están disponibles
+        let email = emailTextField.text ?? ""
+        let password = passwordTextfield.text ?? ""
         
+        // Creamos una instancia del modelo de red para realizar la solicitud de inicio de sesión
+        let model = NetworkModel()
         
-        client.login(requestData: LoginRequest(username: email, password: password)) { result in
-            switch result {
-            case .success(let token):
-                
-                let hero = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
-                let navController = UINavigationController(rootViewController: hero)
-                
-                self.view.window?.rootViewController = navController
-                
-            case .failure(let error):
-             
-                let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
-                popAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                
-                self.present(popAlert, animated: true, completion: nil)
+        // Realizamos la solicitud de inicio de sesión al servidor
+        model.login(user: email, password: password) { [weak self] result in
+            guard case let .success(token) = result else {
+                return
+            }
+            
+            DispatchQueue.main.async{
+                if !token.isEmpty {
+                    let heroesViewController = HeroesViewController()
+                    self?.navigationController?.setViewControllers([heroesViewController], animated: true)
+                }
             }
         }
     }
