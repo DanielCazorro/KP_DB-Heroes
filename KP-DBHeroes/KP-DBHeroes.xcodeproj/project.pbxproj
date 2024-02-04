@@ -24,7 +24,7 @@
 		076DE2A52ABDCCE700EBB136 /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2A32ABDCCE700EBB136 /* HeroesCell.swift */; };
 		076DE2A62ABDCCE700EBB136 /* HeroesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2A42ABDCCE700EBB136 /* HeroesCell.xib */; };
 		079C1D262AC191580072A2DE /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C1D252AC191580072A2DE /* NetworkModel.swift */; };
-		5D00AF842B6E61CB005ECC87 /* UIImage+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00AF832B6E61CB005ECC87 /* UIImage+Remote.swift */; };
+		5D00AF842B6E61CB005ECC87 /* UIImageRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */; };
 		5D00AF862B6E6A9A005ECC87 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00AF852B6E6A9A005ECC87 /* LocalDataModel.swift */; };
 		5D38279C2AC9C21C0069D05C /* NetworkModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38279B2AC9C21C0069D05C /* NetworkModelTest.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		076DE2A32ABDCCE700EBB136 /* HeroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
 		076DE2A42ABDCCE700EBB136 /* HeroesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesCell.xib; sourceTree = "<group>"; };
 		079C1D252AC191580072A2DE /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
-		5D00AF832B6E61CB005ECC87 /* UIImage+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Remote.swift"; sourceTree = "<group>"; };
+		5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageRemote.swift; sourceTree = "<group>"; };
 		5D00AF852B6E6A9A005ECC87 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		5D38279B2AC9C21C0069D05C /* NetworkModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +188,7 @@
 		5D00AF822B6E61BA005ECC87 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5D00AF832B6E61CB005ECC87 /* UIImage+Remote.swift */,
+				5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				076DE26A2ABB4ABB00EBB136 /* LoginViewController.swift in Sources */,
 				076DE2662ABB4ABB00EBB136 /* AppDelegate.swift in Sources */,
 				076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */,
-				5D00AF842B6E61CB005ECC87 /* UIImage+Remote.swift in Sources */,
+				5D00AF842B6E61CB005ECC87 /* UIImageRemote.swift in Sources */,
 				076DE2682ABB4ABB00EBB136 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

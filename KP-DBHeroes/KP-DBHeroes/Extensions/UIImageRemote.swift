@@ -12,7 +12,7 @@ extension UIImageView {
     // Método para establecer la imagen de forma asíncrona desde una URL
     func setImage(url: URL) {
         // Descarga la imagen utilizando URLSession
-        downloadWithUrlSession(url: url) { [weak self] image in
+        downloadUrlSession(url: url) { [weak self] image in
             // Se asegura de actualizar la interfaz de usuario en el hilo principal
             DispatchQueue.main.async {
                 // Asigna la imagen descargada a la vista de imagen
@@ -22,7 +22,7 @@ extension UIImageView {
     }
     
     // Método privado para descargar la imagen utilizando URLSession
-    private func downloadWithUrlSession(url: URL, completion: @escaping (UIImage?) -> Void) {
+    private func downloadUrlSession(url: URL, completion: @escaping (UIImage?) -> Void) {
         // Crea una tarea de descarga de datos con la URL proporcionada
         URLSession.shared.dataTask(with: url) { data, response, error in
             // Comprueba si se recibieron datos y si se puede crear una imagen a partir de ellos
