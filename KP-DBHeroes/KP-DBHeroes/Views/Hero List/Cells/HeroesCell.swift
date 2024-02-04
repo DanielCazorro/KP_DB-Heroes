@@ -9,7 +9,7 @@ import UIKit
 
 class HeroesCell: UITableViewCell {
     
-    // Identificador de la celda reutilizable
+    /// Identificador de la celda reutilizable
     static let identifier = "HeroesCell"
     
     // MARK: - IBOutlets -
@@ -24,7 +24,7 @@ class HeroesCell: UITableViewCell {
         heroImageView.image = nil
     }
     
-    // Método llamado cuando la celda se inicializa desde el archivo xib o storyboard
+    /// Método llamado cuando la celda se inicializa desde el archivo xib o storyboard
     override func awakeFromNib() {
         super.awakeFromNib()
         // Configura el número de líneas y la fuente para las etiquetas de nombre y descripción
