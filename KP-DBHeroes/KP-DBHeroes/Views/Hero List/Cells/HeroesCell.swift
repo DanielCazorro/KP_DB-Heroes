@@ -44,7 +44,7 @@ class HeroesCell: UITableViewCell {
         heroDescLabel.text = character.description
         
         // Descarga y establece la imagen del personaje desde la URL proporcionada
-        heroImageView.setImage(url: character.photo)
+        heroImageView.setPicture(url: character.photo)
     }
 }
 

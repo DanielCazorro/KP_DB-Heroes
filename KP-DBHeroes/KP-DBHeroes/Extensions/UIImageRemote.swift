@@ -10,7 +10,7 @@ import UIKit
 extension UIImageView {
     
     // Método para establecer la imagen de forma asíncrona desde una URL
-    func setImage(url: URL) {
+    func setPicture(url: URL) {
         // Descarga la imagen utilizando URLSession
         downloadUrlSession(url: url) { [weak self] image in
             // Se asegura de actualizar la interfaz de usuario en el hilo principal
