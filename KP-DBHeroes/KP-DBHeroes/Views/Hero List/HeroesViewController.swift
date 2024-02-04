@@ -77,7 +77,6 @@ extension HeroesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Acción cuando se selecciona una fila (personaje) en la tabla
-        print("Selected row at index \(indexPath.row)")
         
         // Obtener el personaje seleccionado y crear una instancia del controlador de vista de detalle
         let character = characters[indexPath.row]
