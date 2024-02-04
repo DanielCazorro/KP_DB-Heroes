@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
     // MARK: - Properties
     private var model: Hero?
     private var transforamtion: Transformation?
-    private var hTransformations: [Transformation] = []
+    private var transformations: [Transformation] = []
     
     // MARK: - OUTLET -
     @IBOutlet private weak var hImageView: UIImageView!
@@ -22,6 +22,13 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Detail View Controller - View Did Load")
+
+        
+        hDescriptionLabel.numberOfLines = .zero
+        configureButton()
+        
         guard let model else {
             if let transforamtion {
                 updateView(with: transforamtion)
@@ -37,7 +44,7 @@ class DetailViewController: UIViewController {
             guard case let .success(transformations) = result else {
                 return
             }
-            self?.hTransformations = transformations.sorted {
+            self?.transformations = transformations.sorted {
                 $0.name.localizedStandardCompare($1.name) == .orderedAscending
             }
             DispatchQueue.main.async {
@@ -49,7 +56,11 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func didSelectButton(_ sender: UIButton) {
+        guard let heroe = model else { return }
         
+        let transformationViewController = TransformationViewController()
+        transformationViewController.updateTransformation(hero: heroe, transformations: transformations)
+        navigationController?.pushViewController(transformationViewController, animated: true)
         
     }
     
@@ -58,12 +69,24 @@ class DetailViewController: UIViewController {
         self.model = model
     }
     
+    func update(transformation: Transformation) {
+        self.transforamtion = transformation
+    }
+    
     func updateView(with hero: TableViewCellRepresentable) {
         title = hero.name
         hNameLabel.text = hero.name
         hDescriptionLabel.text = hero.description
         hImageView.setPicture(url: hero.photo)
         button.isHidden = true
+        print("Detail View Controller - Updated with Hero: \(hero.name)")
+
+    }
+    
+    func configureButton() {
+        button.backgroundColor = .systemBlue
+        button.setTitle("Transformaciones", for: .normal)
+        button.setTitleColor(.white, for: .normal)
     }
 }
 
