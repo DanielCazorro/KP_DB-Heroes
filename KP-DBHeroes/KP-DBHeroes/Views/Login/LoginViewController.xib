@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +36,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="A0O-h5-Uud" userLabel="Stack View Campos">
-                    <rect key="frame" x="12" y="373" width="369" height="226"/>
+                    <rect key="frame" x="12" y="472" width="369" height="226"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-id-HGT" userLabel="Stack View Email Password">
                             <rect key="frame" x="0.0" y="0.0" width="369" height="132"/>
@@ -103,7 +103,7 @@
                 <constraint firstItem="A0O-h5-Uud" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="afN-BB-juG"/>
                 <constraint firstItem="HVo-Tf-hJe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="bcT-DF-sS3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HVo-Tf-hJe" secondAttribute="trailing" constant="12" id="gey-A6-bYu"/>
-                <constraint firstItem="A0O-h5-Uud" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="60" id="l6h-80-DDn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="A0O-h5-Uud" secondAttribute="bottom" constant="120" id="h74-qY-5Ux"/>
                 <constraint firstAttribute="bottom" secondItem="8xB-Cc-Jxc" secondAttribute="bottom" id="mRo-Yl-xCq"/>
                 <constraint firstAttribute="trailing" secondItem="8xB-Cc-Jxc" secondAttribute="trailing" id="qub-Ri-9FS"/>
             </constraints>

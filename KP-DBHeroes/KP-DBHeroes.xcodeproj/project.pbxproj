@@ -27,6 +27,8 @@
 		5D00AF842B6E61CB005ECC87 /* UIImageRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */; };
 		5D00AF862B6E6A9A005ECC87 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00AF852B6E6A9A005ECC87 /* LocalDataModel.swift */; };
 		5D38279C2AC9C21C0069D05C /* NetworkModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38279B2AC9C21C0069D05C /* NetworkModelTest.swift */; };
+		5DDF03892B6FAF8700BD0BA7 /* TransformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF03872B6FAF8700BD0BA7 /* TransformationViewController.swift */; };
+		5DDF038A2B6FAF8700BD0BA7 /* TransformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF03882B6FAF8700BD0BA7 /* TransformationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageRemote.swift; sourceTree = "<group>"; };
 		5D00AF852B6E6A9A005ECC87 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		5D38279B2AC9C21C0069D05C /* NetworkModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTest.swift; sourceTree = "<group>"; };
+		5DDF03872B6FAF8700BD0BA7 /* TransformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransformationViewController.swift; path = ../../../../../../../Downloads/KCDragonBall/TransformationViewController.swift; sourceTree = "<group>"; };
+		5DDF03882B6FAF8700BD0BA7 /* TransformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TransformationViewController.xib; path = ../../../../../../../Downloads/KCDragonBall/TransformationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,6 @@
 				076DE2652ABB4ABB00EBB136 /* AppDelegate.swift */,
 				076DE2672ABB4ABB00EBB136 /* SceneDelegate.swift */,
 				076DE26E2ABB4ABC00EBB136 /* Assets.xcassets */,
-				076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */,
 				076DE2732ABB4ABC00EBB136 /* Info.plist */,
 			);
 			path = "KP-DBHeroes";
@@ -137,9 +140,11 @@
 		076DE2972ABD006C00EBB136 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DDF038B2B6FB90C00BD0BA7 /* Launch */,
 				076DE2982ABD007D00EBB136 /* Login */,
 				076DE29A2ABD00CE00EBB136 /* Hero List */,
 				0743562B2ABF337F00D2AE0F /* Detail */,
+				5DDF03862B6FAF4500BD0BA7 /* Transformation */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +196,23 @@
 				5D00AF832B6E61CB005ECC87 /* UIImageRemote.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DDF03862B6FAF4500BD0BA7 /* Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF03872B6FAF8700BD0BA7 /* TransformationViewController.swift */,
+				5DDF03882B6FAF8700BD0BA7 /* TransformationViewController.xib */,
+			);
+			path = Transformation;
+			sourceTree = "<group>";
+		};
+		5DDF038B2B6FB90C00BD0BA7 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				076DE2702ABB4ABC00EBB136 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +298,7 @@
 			files = (
 				076DE2722ABB4ABC00EBB136 /* LaunchScreen.storyboard in Resources */,
 				0743562F2ABF33D600D2AE0F /* DetailViewController.xib in Resources */,
+				5DDF038A2B6FAF8700BD0BA7 /* TransformationViewController.xib in Resources */,
 				076DE2A62ABDCCE700EBB136 /* HeroesCell.xib in Resources */,
 				076DE2962ABB4BDA00EBB136 /* LoginViewController.xib in Resources */,
 				076DE29E2ABD019600EBB136 /* HeroesViewController.xib in Resources */,
@@ -306,6 +329,7 @@
 				074356362ABFB9D600D2AE0F /* TransformationModel.swift in Sources */,
 				076DE26A2ABB4ABB00EBB136 /* LoginViewController.swift in Sources */,
 				076DE2662ABB4ABB00EBB136 /* AppDelegate.swift in Sources */,
+				5DDF03892B6FAF8700BD0BA7 /* TransformationViewController.swift in Sources */,
 				076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */,
 				5D00AF842B6E61CB005ECC87 /* UIImageRemote.swift in Sources */,
 				076DE2682ABB4ABB00EBB136 /* SceneDelegate.swift in Sources */,
