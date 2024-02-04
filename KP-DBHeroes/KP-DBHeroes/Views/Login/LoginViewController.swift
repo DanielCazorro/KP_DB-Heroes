@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                         self?.navigationController?.setViewControllers([heroesViewController], animated: true)
                     }
                 }
-            case let .failure(error):
+            case .failure(_):
                 // Si la solicitud de inicio de sesión falla, mostramos una alerta con el mensaje de error correspondiente
                 DispatchQueue.main.async {
                     let popAlert = UIAlertController(title: "Error", message: "Inicio de sesión fallido. Por favor, inténtalo de nuevo.", preferredStyle: .alert)
